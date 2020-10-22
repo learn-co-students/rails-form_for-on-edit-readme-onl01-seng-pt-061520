@@ -1,4 +1,4 @@
-<h3>Post Form</h3>
+<!--<h3>Post Form</h3>
 
 <%= form_tag post_path(@post), method: "put" do %>
   <label>Post title:</label><br>
@@ -8,4 +8,14 @@
   <%= text_area_tag :description, @post.description %><br>
   
   <%= submit_tag "Submit Post" %>
+<% end %> -->
+
+Post Form
+<%= form_for(@post) do |f| %>
+<%= f.label 'Post Title' %>
+<%= f.text_field :title %>
+<%= f.label 'Post Description' %>
+<%= f.text_field :description %>
+<%=f.submit%>
+
 <% end %>
